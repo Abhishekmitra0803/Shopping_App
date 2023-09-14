@@ -1,0 +1,595 @@
+<!docktype>
+<html>
+<head>
+<title>AETOS</title>
+<link rel="apple-touch-icon" sizes="180x180" href="C:\Users\ABHISHEK MITRA\OneDrive\Desktop\Azure-Icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="C:\Users\ABHISHEK MITRA\OneDrive\Desktop\Azure-Icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="C:\Users\ABHISHEK MITRA\OneDrive\Desktop\Azure-Icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css
+/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudfl are.com/ajax/libs/popper.js/1.14.6/umd/popper.min.
+js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
+
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+	</script>
+<style>
+	.name{
+		text-align:center;
+		font-size: 70px;
+	}
+	#top{
+		margin-left: auto;
+	}
+	#search{
+		margin-left:650px;
+		width:600px;
+		border-radius: 10px;
+
+	}
+	#but{
+		border-radius: 30px;
+	}
+	#demo{
+		text-align: center;
+	}
+	#last{
+		text-align: center;
+	}
+	#nav{
+		background-attachment: fixed;
+		display: flex;
+
+	}
+	.img{
+		display: block;
+         margin-left: auto;
+         margin-right: auto;
+	}
+	.img tr td img{
+		position: relative;
+		width: 504px;
+	}
+	#one{
+		position: relative;
+		width: 480px;
+	}
+	.one{
+		position: relative;
+		width: 504px;
+
+	}
+	.last{
+		background-color: #1f1e1e;
+	}
+	/* ------------------------------------------------------------- */
+	.foot{
+		background-color: #010101;
+		color: lightgray;
+		height: 415px;
+	}
+	.foot1{
+		display: inline-block;
+		position: relative;
+		right: 570px;
+		text-align: left;
+		top: -38px;
+	}
+	.foot1 ul{
+		list-style: none;
+		
+	}
+	.foot1 ul li{
+		padding: 9px;
+	}
+	.foot1 ul li a{
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+	}
+	.foot1 ul li a:hover{
+		text-decoration: none;
+		color: rgb(104, 104, 104);
+	}
+	/* --------------------------------------------------- */
+	.foot2{
+		display: inline-block;
+		position: relative;
+		right: 435px;
+		text-align: left;
+		top:2px;
+	}
+	.foot2 ul{
+		list-style: none;
+	}
+	.foot2 ul li{
+		padding: 9px;
+	}
+	.foot2 ul li a{
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+	}
+	.foot2 ul li a:hover{
+		text-decoration: none;
+		color: rgb(104, 104, 104);
+	}
+	.foot2 ul{
+		list-style: none;
+	}
+	.foot3{
+		display: inline-block;
+		position: relative;
+		right: -81px;
+		text-align: left;
+		top: -215px;
+	}
+	.foot3  a{
+		text-decoration: none;
+		color:white;
+	}
+
+	.foot4{
+		display: inline-block;
+		position: relative;
+		right: -805px;
+		text-align: left;
+		top: -323px;
+	}
+	.foot5{
+		display: inline-block;
+		position: relative;
+		right: 644px;
+		text-align: left;
+		top:-205px;
+	}
+	.foot5 ul{
+		list-style: none;
+		
+	}
+	.foot5 ul li{
+		display: inline;
+		position: relative;
+		font-size:10px;
+	
+	}
+	.foot5 ul li a{
+		text-decoration: none;
+		color:dodgerblue;
+		padding-right: 32px;
+	}
+	.foot5 ul li a:hover{
+		text-decoration: none;
+		color:white;
+	}
+	/* ------------------------------------------------ */
+	* {
+  		box-sizing: border-box;
+	}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+
+	</style>
+</head>
+<body>
+<div class="container">
+</div>
+<div id="top">
+<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center">
+	<ul class="navbar-nav">
+	<li class="nav-item active">
+	
+<a class="nav-link" href="#">Home</a>
+	</li>
+	<li class="nav-item">
+	
+<a class="nav-link" href="#">Vision</a>
+  </li>
+	<li class="nav-item">
+	
+<a class="nav-link" href="#">Services</a>
+	</li>
+	<li class="nav-item">
+	
+<a class="nav-link" href="#">Help</a>
+	</li>
+	</ul>
+
+</nav>
+</div>
+<div>
+	<h1 class="name"><b><span style="color:#333333">A</span> <span style="color:#4d4d4d">E</span> <span style="color:#666666">T</span> <span style="color:#808080">O</span> <span style="color:#999999">S</span></b></h1>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark" id="nav">
+	<ul class="navbar-nav">
+	<li class="nav-item active">
+	
+<a class="nav-link" href="#">Home</a>
+	</li>
+	<li class="nav-item">
+	
+<a class="nav-link" href="#">Shirts</a>
+  </li>
+	<li class="nav-item">
+	
+<a class="nav-link" href="#">Bottoms</a>
+	</li>
+	<li class="nav-item">
+	
+<a class="nav-link" href="#">Accessories</a>
+	</li>
+	<a class="nav-link" href="#">About</a>
+	</li>
+	<a class="nav-link" href="#">Contact</a>
+	</li>
+	</ul>
+	<br>
+	<br>
+	<input type="text" id="search" name="search" placeholder="search item">
+	<button id="but">🔍</button><br>
+	<button id="but">🛒</button>
+</nav>
+<div id="demo" class="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		
+<li data-target="#demo" data-slide-to="0" class="active"></li>
+		<li data-target="#demo" data-slide-to="1"></li>
+		<li data-target="#demo" data-slide-to="2"></li>
+		<li data-target="#demo" data-slide-to="3"></li>
+	</ul>
+	<div class="carousel-inner">
+	
+<div class="carousel-item active">
+	<img src="https://i.ytimg.com/vi/xLhQVGA1rOM/maxresdefault.jpg" alt="London"
+width="1500" height="800">
+	</div>
+	<div class="carousel-item">
+		
+<img src="https://cdn.shopify.com/s/files/1/0531/7672/9761/collections/bg-hero_1440x.jpg?v=1643929714" alt="Berlin"
+width="1500" height="800">
+	</div>
+	<div class="carousel-item">
+		
+<img src="https://cdn.shopify.com/s/files/1/0029/0868/4397/t/10/assets/5k4a6970-1658435946479_1200x.jpg?v=1658435948" alt="Zurich" width="1500" height="800">
+	</div>
+	<div class="carousel-item">
+		
+<img src="https://i.ytimg.com/vi/g8mjn8qmQYw/maxresdefault.jpg" alt="Venice" width="1500" height="800">
+	</div>
+	<div class="carousel-item">
+		<img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/poster.png" alt="Venice" width="1500" height="800">
+	</div>
+	<div class="carousel-item">
+	</div>
+	
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+		
+<span class="carousel-control-prev-icon"></span>
+	</a>
+	
+<a class="carousel-control-next" href="#demo" data-slide="next">
+		
+<span class="carousel-control-next-icon"></span>
+	</a>
+</div>
+<br>
+<br>
+<h1>Anytime. Anywhere.</h1>
+<h5><b>From work, to running errands, to lounging at home, to a night out,<br>
+Aetos Anywear Pants is your new go-to piece for any occasion.</b></h5>
+<br>
+<br>
+<table class="img">
+	<tr>
+<td><img src="https://cdn.shopify.com/s/files/1/2406/5155/files/Untitled_design_-_2022-10-21T094516.848_620x.png?v=1666359941" >
+<td><img src="https://cdn.shopify.com/s/files/1/2406/5155/files/Untitled_design_-_2022-10-21T094624.760_620x.png?v=1666360014" >
+<td><img src="https://cdn.shopify.com/s/files/1/2406/5155/files/Untitled_design_-_2022-10-21T094820.573_620x.png?v=1666360118" >
+<tr>
+</table>
+<br>
+<br>
+<h3><b>Perfected essentials that serve as the foundation<br> to every man's wardrobe.</b></h3>
+<br>
+<br>
+<table id="last" >
+	<tr>
+		<td><img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/poster2.png"class="one" >
+		<td><img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/poster%204.png" class="one">
+		<td><img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/one.png" id="one">
+
+	</tr>
+</table>
+<div class="last">
+	<h1 style="font-size: 50px;color: white;">AETOS APPAREL</h1>
+</div>
+<br>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Shirts</button>
+  <button class="btn" onclick="filterSelection('cars')"> Bottoms</button>
+  <button class="btn" onclick="filterSelection('people')">Accessories</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="Shirt 1" style="width:100%">
+      <h4>Mountains</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="Shirt 2" style="width:100%">
+      <h4>Lights</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="Shirt 3" style="width:100%">
+      <h4>Forest</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="Car" style="width:100%">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="People" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="People" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="file:///C:/Users/ABHISHEK%20MITRA/OneDrive/Desktop/tshirt1.png" alt="People" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+<div class="foot">
+	<br>
+	<h2>AETOS</h2>
+	<br>
+	<div class="foot1">
+		<ul>
+			<li> <a href="#"><b>Shop</b></a> </li>
+			<li><a href="#">Shirts</a></li>
+			<li><a href="#">Gift Cards</a></li>
+			<li><a href="#">Accessories</a></li>
+		</ul>
+	</div>
+	<div class="foot2">
+		<ul>
+			<li><b>#argumentedessentials</b></li>
+			<li> <a href="#">Our Story</a> </li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">Refund Policy</a></li>
+			<li><a href="#">Terms of Service</a></li>
+		</ul>
+	</div><br>
+	<div class="foot3" >
+		<p><b>Social</b></p>
+		<p>Stay current updates form our social channels.</p>
+		<a href="#"><img src="file:///C:/Users/ABHISHEK%20MITRA/Downloads/pngfind.com-instagram-png-white-2773517.png" alt="insta" height="15px" width="15px"></a>
+		<a href="#"><img src="file:///C:/Users/ABHISHEK%20MITRA/Downloads/toppng.com-facebook-logo-white-501x425.png" alt="facebook" height="21px" width="28px"></a>
+		<a href="#"><img src="file:///C:/Users/ABHISHEK%20MITRA/Downloads/white-youtube-logo-transparent-24.png" alt="Youtube" height="38px" width="38px" ></a>
+	</div><br>
+	<div class="foot4" >
+		<p><b>Newsletter</b></p>
+		<p>Subscribe to get special offers, free giveaways,<br> and early access new pieces</p>
+		<input type="text" id="search1" name="search" placeholder="email@newsletter.com">
+	</div>
+	<div class="foot5">
+		<ul>
+			<li> <a href="#">ATEOS APPEREL 2022 </a> </li>
+			<li><a href="#">OUR STORY</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">Terms of Service</a></li>
+			<li><a href="#">PRIVACY POLICY</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+
+</html>
